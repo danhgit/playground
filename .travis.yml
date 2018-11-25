@@ -5,3 +5,6 @@ branches:
   only:
     - master
     - /^v\d+/
+
+test:
+  - echo $TRAVIS_BRANCH

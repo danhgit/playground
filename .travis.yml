@@ -7,4 +7,4 @@ branches:
     - /^v\d+/
 
 before_install:
-  - echo $TRAVIS_TAG
+  - echo $TRAVIS_BRANCH

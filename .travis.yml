@@ -6,5 +6,5 @@ branches:
     - master
     - /^v\d+/
 
-test:
+before_install:
   - echo $TRAVIS_BRANCH

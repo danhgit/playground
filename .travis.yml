@@ -6,5 +6,10 @@ branches:
     - master
     - /^v\d+/
 
+env:
+  global:
+    - tag=false
+
 before_install:
-  - echo $TRAVIS_BRANCH
+  - if [ "$TRAVIS_BRANCH" =~ ^v\d+ ]; then tag=true; fi
+  - echo $tag

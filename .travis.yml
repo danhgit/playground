@@ -4,7 +4,7 @@ node_js: 10
 branches:
   only:
     - master
-    - /^v\d+/
+    - /^v[0-9]+/
 
 env:
   global:
@@ -12,5 +12,5 @@ env:
 
 before_install:
   - echo $TRAVIS_BRANCH
-  - if [[ "$TRAVIS_BRANCH" =~ ^v\d+ ]]; then tag=true; fi
+  - if [[ "$TRAVIS_BRANCH" =~ ^v[0-9]+ ]]; then tag=true; fi
   - echo $tag

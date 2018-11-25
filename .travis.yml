@@ -11,5 +11,6 @@ env:
     - tag=false
 
 before_install:
-  - if [ "$TRAVIS_BRANCH" =~ ^v\d+ ]; then tag=true; fi
+  - echo $TRAVIS_BRANCH
+  - if [[ "$TRAVIS_BRANCH" =~ ^v\d+ ]]; then tag=true; fi
   - echo $tag

@@ -14,6 +14,8 @@ before_install:
   - echo $TRAVIS_BRANCH
   # - if [[ "$TRAVIS_BRANCH" =~ ^v[0-9]+ ]]; then tag=true; fi
   # - echo $tag
+
+install:
   - echo $TRAVIS_TAG
 
 deploy:

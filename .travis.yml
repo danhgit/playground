@@ -5,6 +5,7 @@ branches:
   only:
     - master
     - dev
+    - /^\d+\.\d+\.\d+.*$/
 
 env:
   global:

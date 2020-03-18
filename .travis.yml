@@ -4,7 +4,7 @@ node_js: 10
 branches:
   only:
     - master
-    - /^v[0-9]+/
+    - dev
 
 env:
   global:
@@ -12,5 +12,14 @@ env:
 
 before_install:
   - echo $TRAVIS_BRANCH
-  - if [[ "$TRAVIS_BRANCH" =~ ^v[0-9]+ ]]; then tag=true; fi
-  - echo $tag
+  # - if [[ "$TRAVIS_BRANCH" =~ ^v[0-9]+ ]]; then tag=true; fi
+  # - echo $tag
+  - echo $TRAVIS_TAG
+
+deploy:
+  provider: npm
+  email: "a@gmail.com"
+  api_key: "1"
+  skip_cleanup: true
+  on:
+    tags: true
